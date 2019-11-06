@@ -16,10 +16,16 @@ server.on('error', function (err) {
 server.on('listening', function () {
     console.log('listening...')
 })
-server.listen(8080, 'localhost');
+server.listen(8081, 'localhost');
 
-server.on('request', function () {
+server.on('request', function (req, res) {
   console.log('有客户端请求了')
+  // res.writeHead('状态码-200', '描述文字', '头信息-{content-type: 'text/html'}')
+  //
+  res.write('<h1>"hello"<h1/>');
+  res.end()
+  // console.log(req)
+  // console.log(res)
 })
 console.log(server.address())
 

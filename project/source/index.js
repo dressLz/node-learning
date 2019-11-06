@@ -1,3 +1,1 @@
-function getVideoInfo() {
-   return {type: 'video'}
-}
+console.log('杨磊')
